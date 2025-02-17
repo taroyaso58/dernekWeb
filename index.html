@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dernek Adı - Ana Sayfa</title>
+    <link rel="stylesheet" href="index.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <h1>Dernek Adı</h1>
+            <nav>
+                <nav id="mobile-menu">
+            
+                    <ul>
+                        <li><a href="#hakkimizda">Hakkımızda</a></li>
+                        <li><a href="#misyon">Misyon</a></li>
+                        <li><a href="#vizyon">Vizyon</a></li>
+                        <li><a href="#kariyer">Kariyer</a></li>
+                        <li><a href="#ebulten">E-Bülten</a></li>
+                        <li><a href="#faaliyetler">Faaliyetler</a></li>
+                        <li><a href="#duyurular">Duyurular</a></li>
+                        <li><a href="#projeler">Projeler</a></li>
+                        <li><a href="#burs-basvurusu">Burs Başvurusu</a></li>
+                    </ul>
+                </nav>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+       
+            <section id="faaliyetler" class="activities">
+                <div class="container">
+                    <h2>Faaliyetler</h2>
+                  
+            
+                                    <!-- Slideshow container -->
+                    <div class="slideshow-container">
+
+                        <!-- Full-width images with number and caption text -->
+                        <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="foto1.jpg" alt="foto1">
+                        <div class="text">Caption Text</div>
+                        </div>
+                    
+                        <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="foto2.jpg" alt="foto2">
+                        <div class="text">Caption Two</div>
+                        </div>
+                    
+                        <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                            <img src="foto3.jpg" alt="foto3">
+                        <div class="text">Caption Three</div>
+                        </div>
+                    
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    <br>
+                    
+                    <!-- The dots/circles -->
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+
+                    <script>
+
+                                    function toggleMenu() {
+                                        const menu = document.getElementById("mobile-menu");
+                                        menu.classList.toggle("active");
+                                    }
+                                    
+                            let slideIndex = 1;
+                            showSlides(slideIndex);
+
+                            // Next/previous controls
+                            function plusSlides(n) {
+                            showSlides(slideIndex += n);
+                            }
+
+                            // Thumbnail image controls
+                            function currentSlide(n) {
+                            showSlides(slideIndex = n);
+                            }
+
+                            function showSlides(n) {
+                            let i;
+                            let slides = document.getElementsByClassName("mySlides");
+                            let dots = document.getElementsByClassName("dot");
+                            if (n > slides.length) {slideIndex = 1}
+                            if (n < 1) {slideIndex = slides.length}
+                            for (i = 0; i < slides.length; i++) {
+                                slides[i].style.display = "none";
+                            }
+                            for (i = 0; i < dots.length; i++) {
+                                dots[i].className = dots[i].className.replace(" active", "");
+                            }
+                            slides[slideIndex-1].style.display = "block";
+                            dots[slideIndex-1].className += " active";}
+
+  
+
+                    </script>
+                </div>
+            </section>
+
+            <section id="etkinlikler" class="etkinlikler">
+                <h2>Planlanan Etkinlikler</h2>
+            <div class="etkin">
+                <div class="card">
+                    <img src="foto1.jpg" alt="Avatar" style="width: 300px; height: 300px;" class="card-img">
+                    <div class="container-card">
+                        <b><p>Her cumartesi günleri</p></b>
+                        <p>Yer: Dernek binası</p>
+                        <p>Saat: 14:00</p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="foto2.jpg" alt="Avatar" style="width:300px; height: 300px;"  class="card-img">
+                    <div class="container-card">
+                        <b> <p>Her cuma günleri</p></b>
+                        <p>Yer: Dernek binası</p>
+                        <p>Saat: 14:00</p>
+                    </div>
+                  </div>
+                <div class="container2">
+                    
+                           
+                </div>
+                <div class="container3">
+                    
+                          
+                </div>
+            </div>
+            </section>
+            
+            <section id="hakkimizda" class="about">
+                <div class="container">
+                    <h2>Biz Kimiz ?</h2>
+                    <p>Derneğimiz, toplumun ihtiyaçlarını karşılamak ve daha iyi bir gelecek inşa etmek amacıyla faaliyet göstermektedir.</p>
+                </div>
+            </section>
+
+        
+
+        <section id="misyon" class="mission">
+            <div class="container">
+                <h2>Misyon</h2>
+                <p>Toplumun her kesimine ulaşarak sürdürülebilir projelerle daha güçlü bir toplum oluşturmak.</p>
+            </div>
+        </section>
+
+        <section id="vizyon" class="vision">
+            <div class="container">
+                <h2>Vizyon</h2>
+                <p>Dayanışma ve destek anlayışını toplumun her alanında yaygınlaştırmak.</p>
+            </div>
+        </section>
+
+        <section id="kariyer" class="career">
+            <div class="container">
+                <h2>Kariyer</h2>
+                <p>Ekibimize katılmak ve derneğimizin misyonuna katkıda bulunmak ister misiniz? Açık pozisyonlar için bize ulaşın.</p>
+            </div>
+        </section>
+
+        <section id="ebulten" class="newsletter">
+            <div class="container">
+                <h2>E-Bülten</h2>
+                <p>Son gelişmelerden haberdar olmak için e-bültenimize kayıt olun.</p>
+                <form>
+                    <input type="email" placeholder="E-posta adresiniz">
+                    <button type="submit" class="btn">Abone Ol</button>
+                </form>
+            </div>
+        </section>
+
+
+        <section id="duyurular" class="announcements">
+            <div class="container">
+                <h2>Duyurular</h2>
+                <p>Son duyurularımızı ve haberleri buradan takip edebilirsiniz.</p>
+            </div>
+        </section>
+
+        <section id="projeler" class="projects">
+            <div class="container">
+                <h2>Projeler</h2>
+                <p>Devam eden ve tamamlanan projelerimiz hakkında bilgi edinin.</p>
+            </div>
+        </section>
+
+        <div class="bagis-burs">
+
+            <section id="bagis_yapma" class="bagis">
+                <div class="container">
+                    <h2>Bağış yap</h2>
+                    <p>Burs başvuru koşulları ve detaylar için formu doldurun.</p>
+                    <a href="#" class="btn">Başvuru Formu</a>
+                </div>
+            </section>
+            
+            <section id="burs-basvurusu" class="scholarship">
+                <div class="container">
+                    <h2>Burs Başvurusu</h2>
+                    <p>Burs başvuru koşulları ve detaylar için formu doldurun.</p>
+                    <a href="#" class="btn">Başvuru Formu</a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Dernek Adı. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+</body>
+</html>
